@@ -11,7 +11,7 @@ use Livewire\WithPagination;
 class Eventlist extends Component
 {
     use WithPagination;
-    
+
     public function render()
     {
         $events = Event::query()->where('active', 1)->where('validate', 1)->paginate(10);

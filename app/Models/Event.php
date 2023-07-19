@@ -18,7 +18,10 @@ class Event extends Model
         'description',
         'price',
         'image',
-        'start_date'
+        'start_date',
+        'validate',
+        'active',
+
     ];
 
     public function likes():BelongsToMany

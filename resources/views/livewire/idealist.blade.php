@@ -7,11 +7,12 @@
         <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
         @foreach ($ideas as $idea)
             <div class="lg:flex" style="background:#fefefe;padding: 5px; border-radius:10px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);">
-                <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="/storage/{{$events->image}}" alt="">
+                <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="{{$idea->imgUrl()}}" alt="">
 
                 <div class="flex flex-col justify-between py-6 lg:mx-6">
                     <h3 class="text-xl font-semibold text-black-800 dark:text-black">
                     {{$idea->title}}
+
                     </h3>
                     <button class="btn btn-primary" wire:click="vote({{$idea->id}})">VOTE</button><span>15</span>
                     <span class="text-sm text-gray-900 dark:text-gray-500">On: {{$idea->start_date}}</span>

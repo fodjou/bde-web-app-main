@@ -32,6 +32,7 @@ class AdminController extends Controller
         redirect(route('home.index'));
 
     }
+
     public function addEvent(CreateEventRequest $request)
     {
         if(auth()->user()->role==0){
@@ -45,7 +46,10 @@ class AdminController extends Controller
             'description' => $request->input('description'),
             'image' => $imagePath,
             'price' => $request->input('price'),
+            'validate'=>1,
+            'active'=>1,
             'start_date' => $request->input('start_date'),
+
         ]);
         return redirect(route('dashboard'))->with('success', 'Your event was added !!!');
 

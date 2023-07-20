@@ -29,6 +29,8 @@ class Event extends Model
         return $this->belongsToMany(Like::class);
     }
 
+
+
     public function imgUrl():string
     {
         return Storage::disk('public')->url($this->image);

@@ -198,7 +198,7 @@
   </div>
 
   <!--Copyright section-->
-  <div class="bg-orange-200 p-6 text-center dark:bg-orange-700">
+  <div class="-200 p-6 text-center dark:-700">
     <span>© 2023 Copyright:</span>
     <a
       class="font-semibold text-white-600 dark:text-white-600 hover:text-orange-600"

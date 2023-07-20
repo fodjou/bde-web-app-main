@@ -21,7 +21,7 @@ class IdeaController extends Controller
             return view('ideas.add_idea');
         }
         redirect(route('login'));
-       
+
     }
     public function addIdea(CreateIdeaRequest $request)
     {
@@ -40,7 +40,7 @@ class IdeaController extends Controller
             'start_date' => $request->input('start_date'),
         ]);
         return redirect(route('ideas.index'))->with('success', 'Your idea was added !!!');
-        
+
         }
         return redirect(route('login'));
     }

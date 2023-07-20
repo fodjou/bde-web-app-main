@@ -1,4 +1,4 @@
-<section class="bg-orange dark:bg-orange-600">
+<section class="bg-yellow dark:bg-yellow-600">
 @include('layouts.flash-message')
     <div class="container px-6 py-10 mx-auto">
         <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">Ideas Box
@@ -12,7 +12,6 @@
                 <div class="flex flex-col justify-between py-6 lg:mx-6">
                     <h3 class="text-xl font-semibold text-black-800 dark:text-black">
                     {{$idea->title}}
-
                     </h3>
                     <button class="btn btn-primary" wire:click="vote({{$idea->id}})">VOTE</button><span>15</span>
                     <span class="text-sm text-gray-900 dark:text-gray-500">On: {{$idea->start_date}}</span>

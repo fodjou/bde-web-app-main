@@ -35,13 +35,13 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased" id="app">
-        <div class="min-h-screen bg-orange-100">
+        <div class="min-h-screen -100">
             @auth
                 @include('layouts.navigation')
             @else
                 @include('layouts.guestnavbar')
             @endauth
-        
+
 
             <!-- Page Heading -->
             <!-- @if (isset($header))
@@ -52,11 +52,11 @@
                 </header>
             @endif -->
 
-<div class="container">  
+<div class="container">
     @if(session('success'))
         <div class="alert alert-success">
           {{ session('success') }}
-        </div> 
+        </div>
     @endif
 </div>
 
